@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".ui.signup.SignupActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:padding="@dimen/margin_medium"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/margin_xlarge"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom_layout"
+        app:layout_constraintTop_toBottomOf="@id/iv_back">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_background"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/margin_medium_3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/TextRegular.SemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Almost there!"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_regular_2" />
+
+                <TextView
+                    style="@style/TextRegular.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12dp"
+                    android:text="Complete the form below to create \nyour Ready To Travel account." />
+
+                <TextView
+                    style="@style/TextRegular.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:text="*Mandatory"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/text_small" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_first_name"
+                style="@style/TextInputLayoutStyle.Enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <EditText
+                    style="@style/TextRegular.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:backgroundTint="@color/color_white"
+                    android:hint="First Name *"
+                    android:inputType="textPersonName"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/color_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_last_name"
+                style="@style/TextInputLayoutStyle.Enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <EditText
+                    style="@style/TextRegular.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:backgroundTint="@color/color_white"
+                    android:hint="Last Name *"
+                    android:inputType="textPersonName"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/color_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_email_address"
+                style="@style/TextInputLayoutStyle.Enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <EditText
+                    style="@style/TextRegular.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:backgroundTint="@color/color_white"
+                    android:hint="Email Address *"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/color_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_signup_dob"
+                    style="@style/TextInputLayoutStyle.Enable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    app:layout_constraintEnd_toEndOf="@id/gl_center_dob"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        style="@style/TextRegular.Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/login_input_height"
+                        android:backgroundTint="@color/color_white"
+                        android:focusable="false"
+                        android:hint="Date of Birth *"
+                        android:inputType="date"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/color_black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:src="@drawable/img_date_of_birth"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/til_signup_dob"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gl_center_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".5" />
+
+                <LinearLayout
+                    android:id="@+id/ll_tab_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:background="@drawable/bg_round_large"
+                    android:backgroundTint="@color/color_grey_xxfew"
+                    android:padding="@dimen/margin_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/gl_center_dob"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        app:tabGravity="fill"
+                        app:tabIndicator="@drawable/bg_tab_indicator_round"
+                        app:tabIndicatorColor="@null"
+                        app:tabIndicatorFullWidth="true"
+                        app:tabIndicatorGravity="stretch"
+                        app:tabMaxWidth="0dp"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/color_black"
+                        app:tabTextAppearance="@style/TabLayoutTextAppearance"
+                        app:tabTextColor="@color/color_black">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Female" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Male" />
+
+                    </com.google.android.material.tabs.TabLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_nationality"
+                style="@style/TextInputLayoutStyle.Enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <EditText
+                    style="@style/TextRegular.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:backgroundTint="@color/color_white"
+                    android:hint="Nationality *"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/color_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_residence"
+                style="@style/TextInputLayoutStyle.Enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <EditText
+                    style="@style/TextRegular.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_input_height"
+                    android:backgroundTint="@color/color_white"
+                    android:hint="Country of Residence *"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/color_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.pthw.statedatamanagement.components.CustomPhoneEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/margin_medium_3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btb_create_new_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_btn_size"
+            android:background="@drawable/bg_login_button_gradient_round"
+            android:stateListAnimator="@null"
+            android:text="Create my account now"
+            android:textAppearance="@style/TextRegular.Normal"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

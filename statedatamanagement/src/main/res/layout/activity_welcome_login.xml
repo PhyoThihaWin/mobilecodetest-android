@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".ui.welcomelogin.WelcomeLoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_welcome_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_welcome_clouds"
+        app:layout_constraintTop_toTopOf="@id/gl_center" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/gl_center">
+
+        <TextView
+            style="@style/TextRegular.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to \nReady to Travel"
+            android:textSize="30sp" />
+
+        <TextView
+            style="@style/TextRegular.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Sign up with Facebook for the most \nfulfilling trip planning experience with us!" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_btn_size"
+            android:background="@drawable/bg_login_button_round"
+            android:drawableEnd="@drawable/ic_facebook"
+            android:stateListAnimator="@null"
+            android:text="@string/log_in_with_facebook"
+            android:textAppearance="@style/TextRegular.Normal"
+            app:backgroundTint="@color/color_facebook_btn" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_btn_size"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/bg_login_button_round"
+            android:stateListAnimator="@null"
+            android:text="@string/log_in_with_email_address"
+            android:textAppearance="@style/TextRegular.Normal"
+            app:backgroundTint="@color/color_facebook_btn" />
+
+        <Button
+            android:id="@+id/btb_create_new_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_btn_size"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/bg_login_button_gradient_round"
+            android:stateListAnimator="@null"
+            android:text="Create a new account"
+            android:textAppearance="@style/TextRegular.Normal"
+            app:backgroundTint="@null" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

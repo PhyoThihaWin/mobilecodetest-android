@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_text_input"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_input_height"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:paddingHorizontal="@dimen/margin_medium_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_country_code"
+            style="@style/TextRegular.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small"
+            android:text="+95"
+            android:textColor="@color/color_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_vertical_line"
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:background="@color/color_grey_xfew"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_country_code"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_underline"
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@color/color_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/TextRegular.Medium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_large"
+            android:background="@null"
+            android:hint="@string/signup_hint_mobile_number"
+            android:inputType="phone"
+            android:letterSpacing=".06"
+            android:maxLength="11"
+            android:paddingStart="0dp"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textColorHint="@color/color_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_vertical_line"
+            tools:text="979999" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_hint"
+        style="@style/TextRegular.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:background="@color/color_white"
+        android:text="@string/signup_hint_mobile_number"
+        android:textColor="@color/color_grey"
+        android:textSize="@dimen/text_small"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/ll_text_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_text_input"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        style="@style/TextRegular.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/color_red_error"
+        android:textSize="@dimen/text_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_text_input"
+        tools:text="Mobile number"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

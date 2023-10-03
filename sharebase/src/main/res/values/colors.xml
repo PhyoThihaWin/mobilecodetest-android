@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary_ripple">#19323232</color>
+    <color name="color_standard_text">#444444</color>
+    <color name="glider_placholder">#C8C8C8</color>
+</resources>

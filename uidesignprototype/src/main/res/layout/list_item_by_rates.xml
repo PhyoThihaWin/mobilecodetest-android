@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_medium_3"
+    android:background="@drawable/bg_dotted">
+
+    <TextView
+        android:id="@+id/tv_e_voucher_title"
+        style="@style/TextRegular.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:text="YOUR E-VOUCHER RATE"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_next_red"
+        app:layout_constraintBottom_toBottomOf="@id/tv_e_voucher_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_e_voucher_title" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextRegular.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Mobile App Special Voucher"
+        android:textSize="@dimen/text_regular_3"
+        app:layout_constraintStart_toStartOf="@id/tv_e_voucher_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_e_voucher_title" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_facilities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textView5">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_two"
+                android:layout_height="@dimen/icon_size_two"
+                android:src="@drawable/img_fnb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Inclusive of Breakfast" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_two"
+                android:layout_height="@dimen/icon_size_two"
+                android:src="@drawable/img_discount" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="20% off In-Room Service" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextRegular.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:background="@drawable/bg_rectangle_stoke_red"
+            android:paddingHorizontal="@dimen/margin_12dp"
+            android:paddingVertical="@dimen/margin_medium_2"
+            android:text="View Rates"
+            android:textColor="@color/color_primary" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:background="@color/color_grey"
+        app:layout_constraintTop_toBottomOf="@+id/ll_facilities" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView3">
+
+        <TextView
+            style="@style/TextRegular.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avg. Nightly / Room From"
+            android:textColor="@color/color_black" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/TextRegular.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject to GST &amp; Service charge"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/text_small" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/TextRegular.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:text="SGD"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextRegular.SemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:text="161.42"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_xxlarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    <TextView
+        style="@style/TextRegular.SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/color_yellow"
+        android:gravity="center"
+        android:paddingVertical="@dimen/margin_medium"
+        android:text="MEMBER DETAILS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

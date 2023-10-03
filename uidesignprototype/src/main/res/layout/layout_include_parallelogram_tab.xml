@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_large"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/margin_medium_3">
+
+
+    <com.arkapp.trapeziumview.TrapeziumCustomView
+        android:id="@+id/tcv_by_room"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="-8dp"
+        app:edgeRadius="0"
+        app:layout_constraintEnd_toEndOf="@id/gl_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeColor="@color/color_grey_xxfew"
+        app:slopeLength="16"
+        app:slopeType="leftBottom" />
+
+    <com.arkapp.trapeziumview.TrapeziumCustomView
+        android:id="@+id/tcv_by_room_blue"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="-8dp"
+        app:edgeRadius="0"
+        app:layout_constraintEnd_toEndOf="@id/gl_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeColor="@color/color_tab_blue"
+        app:slopeLength="16"
+        app:slopeType="leftBottom" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <com.arkapp.trapeziumview.TrapeziumCustomView
+        android:id="@+id/tcv_by_rates_blue"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="-8dp"
+        android:layout_weight="1"
+        app:edgeRadius="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gl_tab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeColor="@color/color_tab_blue"
+        app:slopeLength="16"
+        app:slopeType="leftBottom" />
+
+    <com.arkapp.trapeziumview.TrapeziumCustomView
+        android:id="@+id/tcv_by_rates"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="-8dp"
+        android:layout_weight="1"
+        app:edgeRadius="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gl_tab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeColor="@color/color_grey_xxfew"
+        app:slopeLength="16"
+        app:slopeType="leftBottom" />
+
+    <TextView
+        style="@style/TextRegular.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Room"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_regular_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gl_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TextRegular.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Rates"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_regular_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gl_tab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

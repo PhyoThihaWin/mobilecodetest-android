@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_bar_height">54dp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+    <dimen name="icon_size_two">50dp</dimen>
+    <dimen name="carousel_height">180dp</dimen>
+</resources>

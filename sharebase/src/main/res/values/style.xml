@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.AppTheme.MaterialDatePicker" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="materialCalendarHeaderToggleButton">
+            @style/Widget.AppTheme.MaterialCalendar.HeaderToggleButton
+        </item>
+    </style>
+
+    <style name="Widget.AppTheme.MaterialCalendar.HeaderToggleButton" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="circleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- region text style -->
+    <style name="TextAppearance.General" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:textColor">@color/color_standard_text</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextRegular.Light" parent="TextAppearance.General">
+        <item name="fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="TextRegular.Normal" parent="TextAppearance.General">
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextRegular.Medium" parent="TextAppearance.General">
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TextRegular.SemiBold" parent="TextAppearance.General">
+        <item name="fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="TextRegular.Bold" parent="TextAppearance.General">
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextRegular.ExtraBold" parent="TextAppearance.General">
+        <item name="fontFamily">@font/poppins_black</item>
+    </style>
+
+    <style name="TextNumberRegular.SemiBold" parent="TextAppearance.General">
+        <item name="fontFamily">@font/worksans_semi_bold</item>
+    </style>
+    <!-- endregion -->
+
+</resources>
